@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginTest {
+
     public WebDriver driver;
 
     public LoginTest(WebDriver driver){
@@ -18,14 +19,14 @@ public class LoginTest {
     @FindBy (xpath = "//a[@class='userbar__button __active']")
     WebElement loginBtn;
     @FindBy (xpath = "//input[@class='field j-focus'][@tabindex='1']")
-    WebElement enterLogin;
+    WebElement inputLgn;
     @FindBy (xpath = "//input[@type='password'][@class='field'][@tabindex='2']")
-    WebElement enterPassword;
+    WebElement inputPswrd;
     @FindBy (xpath = "//input[@class = 'btn-input'][@value ='Увійти']")
     WebElement btnLogin;
 
     public void clickLogin(){loginBtn.click();}
-    public void inputLogin(){enterLogin.sendKeys("killativspidey@gmail.com");}
-    public void inputPassword(){enterPassword.sendKeys("Gimno3000");}
+    public void inputLogin(){inputLgn.sendKeys("killativspidey@gmail.com");}
+    public void inputPassword(){inputPswrd.sendKeys("Gimno3000");}
     public void clickBtnLogin(){btnLogin.click();}
 }
